@@ -23,7 +23,7 @@ function linkAction() {
 
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-const skillsContent = document.getElementsByClassName("skills__content");
+const skillsContent = document.querySelectorAll(".skills__content");
 console.log(skillsContent);
 const skillsHeader = document.querySelectorAll(".skills__header");
 console.log(skillsHeader);
@@ -45,7 +45,11 @@ function toggleSkills() {
   let target = this.parentElement;
   //   let isClose = this.parentElement.classList.include("skills__close");
   let isClose = [...this.parentElement.classList].includes("skills__close");
-  console.log(isClose);
+
+  skillsContent.forEach((skill) => {
+    if (!isClose) return;
+    skill.classList.add("skills__close");
+  });
 
   target.classList.toggle("skills__close");
 }
