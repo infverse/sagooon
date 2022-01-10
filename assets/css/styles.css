@@ -163,7 +163,7 @@ img {
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
-    /* bottom: -100%; */
+    bottom: -100%;
     left: 0;
     width: 100%;
     background-color: var(--body-color);
@@ -336,12 +336,21 @@ img {
 }
 
 .skills__container {
+  /* width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; */
   row-gap: 0;
 }
 
 .skills__header {
   display: flex;
   align-items: center;
+  margin-bottom: var(--mb-2-5);
+  cursor: pointer;
+}
+
+.skill {
   margin-bottom: var(--mb-2-5);
   cursor: pointer;
 }
